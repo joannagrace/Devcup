@@ -1,0 +1,22 @@
+Register    >   Register Info   >   Login   >   Select Package (Per two weeks)(minimum salary 364 daily)
+
+                                                                >   Package 1 (Savings) >   35% Savings (P1,274)
+                                                                                        >   25% Bills   (P910)
+                                                                                        >   25% Grocery (P910)
+                                                                                        >   15% Other Needs (P546)
+                                                                                        
+                                                                >   Package 2 (Bills)   >   15% Savings (P546)
+                                                                                        >   35% Bills   (P1,274)
+                                                                                        >   25% Grocery (P910)
+                                                                                        >   25% Other Needs (P910)
+                                                                                        
+                                                                >   Package 3 (Grocery) >   20% Savings (P728)
+                                                                                        >   25% Bills   (P910)
+                                                                                        >   35% Grocery (P1,274)
+                                                                                        >   20% Other Needs (P728)
+                                                                
+                                                                >   Package 4 (Other)   >   15% Savings (P546)
+                                                                                        >   25% Bills   (P910)
+                                                                                        >   25% Grocery (P910)
+                                                                                        >   35% Other Needs (P1,274)
+                                                                                        

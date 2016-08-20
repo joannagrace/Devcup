@@ -35,6 +35,7 @@
                             <a class="dropdown-item" href="#">Package 1</a>
                             <a class="dropdown-item" href="#">Package 2</a>
                             <a class="dropdown-item" href="#">Package 3</a>
+                        	<a class="dropdown-item" href="#">Package 4</a>
                         </div>
                     </li>
                     <li class="nav-item">
@@ -51,32 +52,43 @@
     </nav>
     <br>
     <div class="container">
-        <div class="col-md-6 col-md-offset-3 z-depth-1">
+        <div class="col-md-6 col-md-offset-3 z-depth-2" style="background:#455a64;">
             <br>
-            <div class="container""><h3 align="center">Salary</h3></div>
-            <hr>
-            <input id="input_text" type="text" style="text-align:center;background:#999999;color:white" placeholder="Type your salary amount">
-            <br>
-            <br>
-        </div>
-         </div>
-         <br>
-        <div class="col-md-6 col-md-offset-3 z-depth-1">
-            <br>
-            <h3 align="center">Salary</h3>
-            <hr>
-            <input id="input_text" type="text" style="text-align:center;background:#999999;color:white" placeholder="Type your salary amount">
+            <h6 style="text-align:center;color:white"><strong>Salary </strong></h6>
+            <hr style="background:white">
+            <input id="input_text" type="text" style="text-align:center;background: #cccccc;height:25px;color:#000000" placeholder="Type your salary amount">
             <br>
             <br>
         </div>
-
-
-
-
-
-
-
-   
+    </div>
+    <br>
+    <div class="col-md-6 col-md-offset-3 z-depth-1" style="background:#455a64;margin-top:-16px">
+        <br>
+        <h6 style="text-align:center;color:white"><strong>Calculated Amount for your Budget </strong></h6>
+        <hr style="background:white">
+        <h6 style="color:#ffffff"> For Your Savings (35%)</h6>
+        <div class="md-form ">
+            <input type="text " id="form2 " class="form-control " style="background: #cccccc;height:25px " value=" " disabled>
+            <label for="form2 "></label>
+        </div>
+        <h6 style="color:#ffffff"> For Your Bills (25%)</h6>
+        <div class="md-form ">
+            <input type="text " id="form2 " class="form-control " style="background: #cccccc;height:25px " value=" " disabled>
+            <label for="form2 "></label>
+        </div>
+        <h6 style="color:#ffffff"> For Your Grocery (25%)</h6>
+        <div class="md-form ">
+            <input type="text " id="form2 " class="form-control " style="background: #cccccc;height:25px " value=" " disabled>
+            <label for="form2 "></label>
+        </div>
+        <h6 style="color:#ffffff"> For Your Other Expenses (15%)</h6>
+        <div class="md-form ">
+            <input type="text " id="form2 " class="form-control " style="background: #cccccc;height:25px " value=" " disabled>
+            <label for="form2 "></label>
+        </div>
+        <center>
+            <button type="button" class="btn btn-info" style="color:#000000;"><strong>Save</button></strong> </center>
+    </div>
     <script type="text/javascript " src="js/jquery-2.2.3.min.js "></script>
     <!-- Bootstrap tooltips -->
     <script type="text/javascript " src="js/tether.min.js "></script>
