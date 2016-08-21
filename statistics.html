@@ -32,13 +32,13 @@
                 <!--Links-->
                 <ul class="nav navbar-nav pull-right">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#"><i class="fa fa-envelope"></i>  About</a>
+                        <a class="nav-link" href="#">  About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa fa-gear"></i>  Profile</a>
+                        <a class="nav-link" href="#"> Profile</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-fax"></i>Packages</a>
+                        <a class="nav-link dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Packages</a>
                         <div class="dropdown-menu dropdown-default" aria-labelledby="dropdownMenu1" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
                             <a class="dropdown-item" href="#">Package 1</a>
                             <a class="dropdown-item" href="#">Package 2</a>
@@ -47,10 +47,10 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa fa-gear"></i>  Statistics</a>
+                        <a class="nav-link" href="#"> Statistics</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa fa-gear"></i>  Logout</a>
+                        <a class="nav-link" href="#">  Logout</a>
                     </li>
                 </ul>
                 <!--Links-->
@@ -59,7 +59,7 @@
         </div>
     </nav>
     <div class="container">
-        <div class="col-md-4" style="margin-top:5px">
+        <div class="col-md-offset-2 col-md-4" style="margin-top:5px">
             <select class="mdb-select">
                 <option value="" disabled selected>Select Month</option>
                 <option value="January">January</option>
@@ -78,36 +78,38 @@
         </div>
         <div class="col-md-4" style="margin-top:5px">
             <select class="mdb-select">
-                <option value="" disabled selected>Select Cut-off</option>
-                <option value="15">Day 15</option>
-                <option value="30">Day 30</option>
-                <option value="31">Day 31</option>
-            </select>
-        </div>
-        <div class="col-md-4" style="margin-top:5px">
-            <select class="mdb-select">
                 <option value="" disabled selected>Select Year</option>
                 <option value="2016">2016</option>
                 <option value="2017">2017</option>
-                
             </select>
         </div>
     </div>
-
     <br>
-     <div class="chart-container">
-                <div style="width:96%;padding-top:20px;padding-bottom: 20px;">
-                    <canvas id="myChart" height="220"></canvas>
-                </div>
+    <div class="col-md-4">
+        <div class="chart-container">
+            <div style="width:90%;padding-top:20px;padding-bottom: 20px;">
+                <canvas id="myChart" height="220"></canvas>
+                <p align="center">Cut-off 15</p> 
             </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="chart-container">
+            <div style="width:90%;padding-top:20px;padding-bottom: 20px;">
+                <canvas id="myChart2" height="220"></canvas>
+                <p align="center">Cut-off 30/31</p> 
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="chart-container">
 
-
-
-
-
-
-
-
+            <div style="width:90%;padding-top:20px;padding-bottom: 20px;">
+                <canvas id="myChart3" height="220"></canvas>
+               <p align="center">Total Average of the Month</p> 
+            </div>
+        </div>
+    </div>
 
 
     <script type="text/javascript " src="js/jquery-2.2.3.min.js "></script>
@@ -117,6 +119,7 @@
     <script type="text/javascript " src="js/bootstrap.min.js "></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript " src="js/prem.mdb.min.js "></script>
+    <script src="js/Chart.js"></script>
     <script type="text/javascript">
     $(document).ready(function() {
         $('.mdb-select').material_select();
@@ -124,27 +127,87 @@
 
     var data = {
         labels: [
-            "Red",
-            "Blue",
-            "Yellow",
-            "Green",
-            "Pink"
+            "Savings",
+            "Bills",
+            "Grocery",
+            "Other Expenses",
         ],
         datasets: [{
-            data: [300, 50, 100, 60, 20],
+            data: [300, 50, 100, 60],
             backgroundColor: [
-                "#FF6384",
-                "#36A2EB",
-                "#FFCE56"
+                "#2BBBAD",
+                "#4285F4",
+                "#aa66cc",
+                "#ff4444"
             ],
             hoverBackgroundColor: [
-                "#FF6384",
-                "#36A2EB",
-                "#FFCE56"
+                "#2BBBAD",
+                "#4285F4",
+                "#aa66cc",
+                "#ff4444"
             ]
         }]
     };
     var ctx = document.getElementById("myChart").getContext("2d");
+    var myChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: data
+    });
+
+    var data = {
+        labels: [
+            "Savings",
+            "Bills",
+            "Grocery",
+            "Other Expenses",
+        ],
+        datasets: [{
+            data: [300, 50, 100, 60],
+            backgroundColor: [
+                "#2BBBAD",
+                "#4285F4",
+                "#aa66cc",
+                "#ff4444"
+            ],
+            hoverBackgroundColor: [
+                "#2BBBAD",
+                "#4285F4",
+                "#aa66cc",
+                "#ff4444"
+            ]
+        }]
+    };
+    var ctx = document.getElementById("myChart2").getContext("2d");
+    var myChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: data
+    });
+
+
+    var data = {
+        labels: [
+            "Savings",
+            "Bills",
+            "Grocery",
+            "Other Expenses",
+        ],
+        datasets: [{
+            data: [300, 50, 100, 60],
+            backgroundColor: [
+                "#2BBBAD",
+                "#4285F4",
+                "#aa66cc",
+                "#ff4444"
+            ],
+            hoverBackgroundColor: [
+                "#2BBBAD",
+                "#4285F4",
+                "#aa66cc",
+                "#ff4444"
+            ]
+        }]
+    };
+    var ctx = document.getElementById("myChart3").getContext("2d");
     var myChart = new Chart(ctx, {
         type: 'doughnut',
         data: data
